@@ -1,0 +1,4 @@
+for i in {54..64}; do
+    mkdir -p key$i
+    wg genkey | tee key$i/private.key | wg pubkey > key$i/public.key
+done
